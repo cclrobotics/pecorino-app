@@ -11,6 +11,10 @@ class Motors extends React.Component{
 		Api.delete('/motors/enabled')
 	}
 
+	startup = async () => {
+		Api.get('/motors/startup')
+	}
+
 	render(){
 		return(
 			<Paper>
@@ -24,6 +28,10 @@ class Motors extends React.Component{
 					<Grid item={true}>
 						<Button fullWidth={true} color='secondary' size='small' variant='contained' onClick={this.disableMotors}>DISABLE</Button>
 					</Grid>
+					<Grid item={true}>
+                                                <Button fullWidth={true} color='secondary' size='small' variant='contained' onClick={this.startup}>STARTUP</Button>
+					</Grid>
+
 				</Grid>
 			</Paper>
 		)

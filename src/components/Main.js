@@ -2,6 +2,7 @@ import React from 'react'
 import { Paper, Grid, Typography, Button } from '@material-ui/core';
 
 import Motors from './Motors'
+import Drive from './Drive'
 import Pins from './Pins'
 import Port from './Port'
 import Position from './Position'
@@ -40,6 +41,8 @@ class Main extends React.Component{
 					<Grid container={true} direction='row' spacing={8}>
 						<Grid item={true} md={3}>
 							<Motors />
+                                                        <Drive />
+                                                        
 						</Grid>
 						<Grid item={true} md={3}>
 							<Pins />
